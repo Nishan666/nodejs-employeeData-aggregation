@@ -1,0 +1,220 @@
+{
+	"info": {
+		"_postman_id": "d95259e3-2c1c-4e88-8f5c-06b2fdb6e1a8",
+		"name": "aggregation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "28616774"
+	},
+	"item": [
+		{
+			"name": "localhost:5000/addleave",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "emp_id",
+							"value": "64b7a8c36d58f8c6a80c3238",
+							"type": "default"
+						},
+						{
+							"key": "total_leave",
+							"value": "4",
+							"type": "default"
+						},
+						{
+							"key": "reason",
+							"value": "health",
+							"type": "default"
+						},
+						{
+							"key": "date",
+							"value": "2021-04-21",
+							"type": "default"
+						}
+					]
+				},
+				"url": "localhost:5000/addleave"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:5000/addsalary",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "emp_id",
+							"value": "64b7a8ca6d58f8c6a80c323a",
+							"type": "default"
+						},
+						{
+							"key": "salary",
+							"value": "37663333",
+							"type": "default"
+						},
+						{
+							"key": "sal_details",
+							"value": "pending",
+							"type": "default"
+						}
+					]
+				},
+				"url": "localhost:5000/addsalary"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:5000/addemp",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/home/nick/workingdirForPostman/new.png"
+						},
+						{
+							"key": "emp_group",
+							"value": "jim",
+							"type": "default"
+						}
+					]
+				},
+				"url": "localhost:5000/addemp"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:5000/avgsal",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "start",
+							"value": "2000-01-01",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "end",
+							"value": "2023-01-01",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": "localhost:5000/avgsal"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:5000/leavedetail",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "start",
+							"value": "2021-01-01",
+							"type": "text"
+						},
+						{
+							"key": "end",
+							"value": "2023-01-01",
+							"type": "text"
+						}
+					]
+				},
+				"url": "localhost:5000/leavedetail"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:5000/totalsal",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "start",
+							"value": "2021-01-01",
+							"type": "text"
+						},
+						{
+							"key": "end",
+							"value": "2023-01-01",
+							"type": "text"
+						}
+					]
+				},
+				"url": "localhost:5000/totalsal"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:5000/allemp",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:5000/allemp"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:5000/pageemp",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/pageemp?limit=10&page=1",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"pageemp"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "10"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
